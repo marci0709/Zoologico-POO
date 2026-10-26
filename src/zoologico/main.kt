@@ -20,7 +20,18 @@ fun construirZoologico() {
     val aviario = RecintoAviario(diametro = 400, alto = 300)
     aviario.imprimirTamano()
 }
+fun crearAnimales() {
+    val leon = Leon()
+    val loro = Loro()
+
+    leon.presentarse()
+    leon.emitirSonido()
+
+    loro.presentarse()
+    loro.emitirSonido()
+}
 
 fun main() {
     construirZoologico()
+    crearAnimales()
 }
