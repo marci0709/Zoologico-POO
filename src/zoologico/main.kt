@@ -23,12 +23,27 @@ fun construirZoologico() {
 fun crearAnimales() {
     val leon = Leon()
     val loro = Loro()
+    val aguila = Aguila()
 
     leon.presentarse()
     leon.emitirSonido()
 
     loro.presentarse()
     loro.emitirSonido()
+    loro.volar()
+    loro.aterrizar()
+
+    aguila.presentarse()
+    aguila.emitirSonido()
+    aguila.volar()
+    aguila.aterrizar()
+
+    // Polimorfismo: una lista de la interfaz con objetos distintos
+    println("--- Todos los voladores ---")
+    val voladores: List<Volador> = listOf(loro, aguila)
+    for (volador in voladores) {
+        volador.volar()
+    }
 }
 
 fun main() {

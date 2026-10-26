@@ -22,11 +22,30 @@ class Leon : Animal() {
     }
 }
 
-class Loro : Animal() {
+class Loro : Animal(), Volador {
     override val nombre = "Loro"
     override val dieta = "frugívoro"
+    override val alturaMaxima = 100
 
     override fun emitirSonido() {
         println("¡Hola, hola!")
+    }
+
+    override fun volar() {
+        println("El loro vuela entre los árboles (altura máxima: $alturaMaxima m)")
+    }
+}
+
+class Aguila : Animal(), Volador {
+    override val nombre = "Águila"
+    override val dieta = "carnívoro"
+    override val alturaMaxima = 3000
+
+    override fun emitirSonido() {
+        println("¡Kiiii!")
+    }
+
+    override fun volar() {
+        println("El águila planea sobre las montañas (altura máxima: $alturaMaxima m)")
     }
 }
