@@ -16,6 +16,9 @@ fun construirZoologico() {
     recinto4.imprimirTamano()
     recinto4.volumen = 4.5
     recinto4.imprimirTamano()
+
+    val aviario = RecintoAviario(diametro = 400, alto = 300)
+    aviario.imprimirTamano()
 }
 
 fun main() {
